@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자소서 코치 Pro</title>
+  <meta name="description" content="게임업계 지원자를 위한 자기소개서·경험 분석 워크스페이스">
+  <style>
+:root{--bg:#eef3f8;--panel:rgba(255,255,255,.86);--line:rgba(148,163,184,.22);--text:#101828;--muted:#526076;--muted2:#75839b;--accent:#2747ff;--ok:#10b981;--danger:#ef4444;--shadow:0 24px 60px rgba(15,23,42,.12);--shadow-sm:0 10px 24px rgba(15,23,42,.06);--r:24px;--r2:18px;--header:84px;--max:1540px;--font:"Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%}body{font-family:var(--font);color:var(--text);background:radial-gradient(circle at top left,rgba(39,71,255,.14),transparent 24%),linear-gradient(180deg,#f7fbff 0%,#eef3f8 42%,#e8edf4 100%);overflow:hidden}body.modal-open{overflow:hidden}
+button,input,select,textarea{font:inherit}button{border:0;background:none;padding:0}input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:#fff;color:var(--text);outline:none}textarea{min-height:220px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:rgba(39,71,255,.7);box-shadow:0 0 0 4px rgba(39,71,255,.12)}
+.gridbg{position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(148,163,184,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.05) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(180deg,rgba(0,0,0,.32),transparent 88%)}
+.header{position:sticky;top:0;z-index:20;min-height:var(--header);display:flex;align-items:center;justify-content:space-between;gap:18px;width:min(100%,var(--max));margin:0 auto;padding:18px 22px;backdrop-filter:blur(14px)}
+.brand{display:flex;align-items:center;gap:14px}.mark{width:52px;height:52px;border-radius:18px;background:linear-gradient(135deg,#101828 0%,#1f2937 100%);display:grid;place-items:center;color:#fff;font-weight:800;box-shadow:0 18px 40px rgba(15,23,42,.18)}.brand p,.brand h1{margin:0}.brand p{font-size:.72rem;color:var(--muted2);letter-spacing:.22em;text-transform:uppercase;font-weight:800}.brand h1{font-size:1.22rem;letter-spacing:-.03em}
+.actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.status{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 14px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.82)}.dot{width:10px;height:10px;border-radius:999px;background:#94a3b8;box-shadow:0 0 0 6px rgba(148,163,184,.18)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;cursor:pointer;font-weight:800;transition:transform .18s ease,box-shadow .18s ease}.btn:hover{transform:translateY(-1px)}.btn:disabled{opacity:.58;cursor:wait;transform:none}.btn-primary{background:linear-gradient(135deg,#101828 0%,#1f2b42 100%);color:#fff;box-shadow:0 18px 36px rgba(15,23,42,.16)}.btn-secondary{background:rgba(255,255,255,.88);border:1px solid var(--line);color:var(--text)}.btn-ghost{background:transparent;border:1px solid var(--line);color:var(--muted)}.btn-block{width:100%;min-height:56px;border-radius:18px}
+.app{width:min(100%,var(--max));height:calc(100svh - var(--header));margin:0 auto;padding:0 22px 22px;display:grid;grid-template-columns:minmax(360px,410px) minmax(0,1fr);gap:20px}.surface{background:var(--panel);border:1px solid rgba(255,255,255,.76);border-radius:var(--r);box-shadow:var(--shadow);backdrop-filter:blur(18px)}
+.left{min-height:0;overflow:auto;padding-right:6px;display:flex;flex-direction:column;gap:18px}.left,.scroll,.modal-panel{scrollbar-width:thin;scrollbar-color:#cbd5e1 transparent}.left::-webkit-scrollbar,.scroll::-webkit-scrollbar,.modal-panel::-webkit-scrollbar{width:10px}.left::-webkit-scrollbar-thumb,.scroll::-webkit-scrollbar-thumb,.modal-panel::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:999px}
+.hero,.panel,.scroll,.modal-panel{padding:24px}.hero{position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:0 0 auto 0;height:120px;background:linear-gradient(90deg,rgba(39,71,255,.12),transparent 70%)}.hero>*{position:relative}.eyebrow{margin:0 0 10px;color:var(--accent);font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}.hero h2,.lead h2{margin:0 0 12px;font-size:clamp(2rem,2.8vw,2.7rem);line-height:1.08;letter-spacing:-.05em}.hero p,.section p,.lead p,.card p,.note p,.report-card p,.report-card li{margin:0;color:var(--muted);line-height:1.72}
+.chips,.inline{display:flex;flex-wrap:wrap;gap:10px}.chips{margin-top:16px}.chip{display:inline-flex;align-items:center;min-height:34px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,.82);border:1px solid rgba(148,163,184,.16);color:var(--muted);font-size:.82rem;font-weight:700}
+.section{margin-bottom:18px}.section h3,.modehead h3,.guideblock h3,.report-card h3,.loader h2,.modal-panel h2{margin:0;letter-spacing:-.03em}.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{display:flex;flex-direction:column;gap:8px}.field label{font-size:.88rem;font-weight:800;color:var(--muted)}
+.toggle{display:flex;padding:6px;border-radius:18px;background:rgba(244,247,252,.94);border:1px solid rgba(148,163,184,.16)}.toggle button{flex:1;min-height:42px;border-radius:12px;font-weight:800;color:var(--muted2);cursor:pointer}.toggle button.active{background:#fff;color:var(--accent);box-shadow:var(--shadow-sm)}
+.mode{display:flex;flex-direction:column;gap:16px}.hidden{display:none!important}.modehead{padding:18px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(245,247,251,.94) 100%);border:1px solid rgba(148,163,184,.14);display:flex;flex-direction:column;gap:6px}
+.dropzone{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:220px;padding:24px;text-align:center;border-radius:24px;border:1.5px dashed rgba(39,71,255,.28);background:linear-gradient(180deg,rgba(238,242,255,.9) 0%,rgba(255,255,255,.96) 100%);cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.dropzone.drag{transform:translateY(-2px);box-shadow:0 18px 36px rgba(39,71,255,.1);border-color:var(--accent)}.dropicon{width:72px;height:72px;border-radius:24px;display:grid;place-items:center;background:#fff;border:1px solid rgba(148,163,184,.16);box-shadow:var(--shadow-sm);font-size:1.1rem;font-weight:800}
+.filechip{display:none;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.9);border:1px solid rgba(148,163,184,.16)}.filechip.show{display:flex}.fileinfo{min-width:0;display:flex;align-items:center;gap:12px}.filebadge{width:42px;height:42px;border-radius:14px;background:#101828;color:#fff;display:grid;place-items:center;font-weight:800}.fileinfo strong,.fileinfo span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fileinfo span{color:var(--muted);font-size:.82rem}.iconbtn{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}
+.right{min-height:0;overflow:hidden}.scroll{height:100%;overflow:auto}.lead{display:flex;align-items:end;justify-content:space-between;gap:18px;padding-bottom:20px;border-bottom:1px solid rgba(148,163,184,.16)}.guide{display:flex;flex-direction:column;gap:22px;min-height:100%}.guidegrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:18px}.col{display:flex;flex-direction:column;gap:18px}.mini{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card,.note,.report-card{padding:22px;border-radius:20px;background:rgba(255,255,255,.9);border:1px solid rgba(148,163,184,.16);box-shadow:var(--shadow-sm)}.card strong{display:block;margin-bottom:8px}.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}.list li{position:relative;padding-left:20px;color:var(--muted);line-height:1.7}.list li:before{content:"";position:absolute;left:0;top:.72rem;width:8px;height:8px;border-radius:999px;background:var(--accent);box-shadow:0 0 0 6px rgba(39,71,255,.12)}.dark{background:linear-gradient(180deg,#0f172a 0%,#111827 100%);border-color:rgba(255,255,255,.08)}.dark p,.dark li,.dark h3,.dark strong{color:rgba(255,255,255,.94)}
+.loader,.report{display:none}.loader.show,.report.show{display:flex}.loader{min-height:100%;align-items:center;justify-content:center;text-align:center;flex-direction:column;gap:16px}.spinner{width:88px;height:88px;border-radius:999px;border:4px solid rgba(39,71,255,.16);border-top-color:var(--accent);animation:spin .9s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.report{flex-direction:column;gap:18px}.reporthead{display:flex;align-items:start;justify-content:space-between;gap:18px}.badge{display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border-radius:999px;background:rgba(39,71,255,.08);color:var(--accent);font-size:.8rem;font-weight:800}.reporttitle{margin:10px 0;font-size:clamp(1.65rem,2.4vw,2.1rem);letter-spacing:-.04em}.reportside{display:flex;flex-direction:column;align-items:end;gap:10px}.source{display:inline-flex;align-items:center;min-height:40px;padding:0 12px;border-radius:14px;background:rgba(248,250,252,.92);border:1px solid rgba(148,163,184,.18);color:var(--muted);max-width:240px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.highlight{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(244,248,255,.96) 100%)}.highlight:before{content:"";position:absolute;left:0;top:20px;bottom:20px;width:4px;border-radius:999px;background:var(--accent)}.highlight>*{padding-left:16px}.stars{display:flex;flex-direction:column;gap:14px}.star{padding:18px;border-radius:18px;background:rgba(255,255,255,.88);border:1px solid rgba(148,163,184,.14)}.star h4{margin:0 0 12px;color:#0f1730;font-size:1rem}.star strong{display:block;margin-bottom:4px;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}
+.modal{position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;padding:18px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease,visibility .18s ease}.modal.open{opacity:1;visibility:visible;pointer-events:auto}.backdrop{position:absolute;inset:0;background:rgba(15,23,42,.58);backdrop-filter:blur(8px)}.modal-panel{position:relative;width:min(100%,980px);max-height:min(92svh,960px);overflow:auto;border-radius:28px;background:rgba(255,255,255,.96);border:1px solid rgba(255,255,255,.8);box-shadow:var(--shadow)}.settings{width:min(100%,720px)}.modalhead,.modalfoot{display:flex;align-items:start;justify-content:space-between;gap:16px}.modalhead{padding-bottom:18px;border-bottom:1px solid rgba(148,163,184,.16)}.modalbody{display:flex;flex-direction:column;gap:18px;padding:20px 0}.modalfoot{padding-top:18px;border-top:1px solid rgba(148,163,184,.16);align-items:center}.manualgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.manualcard,.notice{padding:18px;border-radius:18px;border:1px solid rgba(148,163,184,.16);background:rgba(248,250,255,.88);color:var(--muted);line-height:1.7}.manualcard strong,.notice strong{display:block;margin-bottom:8px;color:var(--text)}
+.toast{position:fixed;left:50%;bottom:26px;z-index:120;max-width:min(90vw,560px);padding:14px 18px;border-radius:999px;background:#101828;color:#fff;box-shadow:0 18px 40px rgba(15,23,42,.24);transform:translate(-50%,14px);opacity:0;visibility:hidden;transition:opacity .18s ease,transform .18s ease,visibility .18s ease}.toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+@media (max-width:1200px){body{overflow:auto}.app{height:auto;grid-template-columns:1fr}.left{overflow:visible;padding-right:0}.right{min-height:72vh}.guidegrid{grid-template-columns:1fr}}
+@media (max-width:860px){.header{flex-direction:column;align-items:stretch;padding:16px 14px 8px}.actions{justify-content:space-between}.status{width:100%;justify-content:center}.app{width:100%;padding:0 12px 16px;gap:14px}.hero,.panel,.scroll,.modal-panel{padding:18px}.split,.mini,.manualgrid{grid-template-columns:1fr}.lead,.reporthead,.modalhead,.modalfoot{flex-direction:column;align-items:stretch}.reportside{align-items:stretch}.source{max-width:none}}
+  </style>
+</head>
+<body class="modal-open">
+  <div class="gridbg"></div>
+  <div class="toast" id="toast"></div>
+  <header class="header">
+    <div class="brand">
+      <div class="mark">JP</div>
+      <div>
+        <p>Resume Analysis Workspace</p>
+        <h1>자소서 코치 Pro</h1>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="status"><span class="dot" id="status-dot"></span><span id="status-label">API 설정 필요</span></div>
+      <button class="btn btn-secondary" id="open-guide">사용 설명서</button>
+      <button class="btn btn-primary" id="open-settings">설정</button>
+    </div>
+  </header>
+  <main class="app">
+    <aside class="left">
+      <section class="surface hero">
+        <p class="eyebrow">Game Career Toolkit</p>
+        <h2>경험을 넣으면, 직무 기준으로 다시 읽히는 분석 리포트가 나옵니다.</h2>
+        <p>PDF 이력서, 포트폴리오, 자기소개서 초안, 프로젝트 메모를 읽고 게임업계 채용 관점에서 요약과 STAR 구조, 보완 포인트를 정리해줍니다.</p>
+        <div class="chips"><span class="chip">PDF 분석</span><span class="chip">STAR 정리</span><span class="chip">직무별 피드백</span></div>
+        <div class="inline" style="margin-top:18px;"><button class="btn btn-primary" id="hero-settings">API 연결 설정</button><button class="btn btn-secondary" id="hero-guide">설명서 다시 보기</button></div>
+      </section>
+      <section class="surface panel">
+        <div class="section">
+          <p class="eyebrow">Target</p>
+          <h3>맞춤 진단 대상</h3>
+          <p>기업과 직무를 넣으면 결과의 평가 관점이 더 선명해집니다.</p>
+        </div>
+        <div class="split">
+          <div class="field"><label for="company">지원 회사</label><input id="company" type="text" placeholder="예: 넥슨, 크래프톤, 엔씨소프트"></div>
+          <div class="field"><label for="role">지원 직무</label>
+            <select id="role">
+              <optgroup label="게임 기획">
+                <option value="게임 기획">게임 기획</option>
+                <option value="시스템 기획">시스템 기획</option>
+                <option value="레벨 기획">레벨 기획</option>
+                <option value="라이브 운영 기획">라이브 운영 기획</option>
+                <option value="UI/UX 기획">UI/UX 기획</option>
+              </optgroup>
+              <optgroup label="개발">
+                <option value="클라이언트 개발">클라이언트 개발</option>
+                <option value="서버 개발">서버 개발</option>
+                <option value="툴 개발">툴 개발</option>
+              </optgroup>
+              <optgroup label="운영 / PM">
+                <option value="사업 PM" selected>사업 PM</option>
+                <option value="개발 PM">개발 PM</option>
+                <option value="QA">QA</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+      </section>
+      <section class="surface panel">
+        <div class="field" style="margin-bottom:16px;">
+          <label>분석 방식</label>
+          <div class="toggle"><button id="mode-pdf" class="active" type="button">PDF 분석</button><button id="mode-text" type="button">텍스트 분석</button></div>
+        </div>
+        <div id="panel-pdf" class="mode">
+          <div class="modehead"><p class="eyebrow" style="margin-bottom:6px;">PDF Mode</p><h3>이력서·포트폴리오 PDF를 올려서 분석합니다</h3><p>텍스트 기반 PDF일수록 정확합니다. 스캔 이미지 PDF는 내용 추출이 제한될 수 있습니다.</p></div>
+          <button class="dropzone" id="dropzone" type="button"><div class="dropicon">PDF</div><strong>PDF 파일 업로드</strong><span>클릭하거나 드래그 앤 드롭으로 문서를 추가하세요.</span></button>
+          <input id="pdf-input" type="file" accept=".pdf" hidden>
+          <div class="filechip" id="filechip"><div class="fileinfo"><div class="filebadge">PDF</div><div style="min-width:0;"><strong id="filename">resume.pdf</strong><span>업로드 완료, 분석 대기 중</span></div></div><button class="iconbtn" id="clear-pdf" type="button">×</button></div>
+        </div>
+        <div id="panel-text" class="mode hidden">
+          <div class="modehead"><p class="eyebrow" style="margin-bottom:6px;">Text Mode</p><h3>초안 텍스트나 프로젝트 메모를 그대로 붙여 넣습니다</h3><p>완성된 문장이 아니어도 괜찮습니다. 메모 형태여도 직무 기준으로 다시 구조화합니다.</p></div>
+          <div class="field"><label for="text">분석할 텍스트</label><textarea id="text" placeholder="프로젝트 목적, 팀 규모, 담당 역할, 사용 툴, 문제 해결 과정, 결과를 자유롭게 적어주세요."></textarea></div>
+        </div>
+        <button class="btn btn-primary btn-block" id="analyze" type="button">AI 분석 시작하기</button>
+      </section>
+    </aside>
+    <section class="surface right">
+      <div class="scroll">
+        <div class="guide" id="guide-view">
+          <div class="lead">
+            <div style="max-width:760px;">
+              <p class="eyebrow">Start Here</p>
+              <h2>처음 들어오셨다면, 이 설명서부터 보고 시작하시면 됩니다.</h2>
+              <p>설정에서 API를 연결하고, 지원 직무를 정한 뒤, PDF 또는 텍스트를 넣으면 오른쪽 패널에 분석 결과가 생성됩니다.</p>
+            </div>
+            <div class="inline"><button class="btn btn-primary" id="guide-settings">설정 열기</button><button class="btn btn-secondary" id="guide-large">설명서 크게 보기</button></div>
+          </div>
+          <div class="guidegrid">
+            <div class="col">
+              <div class="mini">
+                <article class="card"><strong>1. 설정 연결</strong><p>Gemini API Key와 모델을 먼저 입력합니다.</p></article>
+                <article class="card"><strong>2. 타깃 지정</strong><p>기업과 직무를 넣으면 평가 관점이 더 선명해집니다.</p></article>
+                <article class="card"><strong>3. 자료 투입</strong><p>PDF를 올리거나 초안 텍스트를 붙여 넣습니다.</p></article>
+                <article class="card"><strong>4. 결과 해석</strong><p>요약, STAR 구조, 보완 포인트를 보고 문서를 다듬습니다.</p></article>
+              </div>
+              <div class="note"><div class="guideblock"><h3>가장 좋은 사용 순서</h3><ul class="list"><li>상단 <strong>설정</strong> 버튼에서 API Key와 모델을 입력합니다.</li><li><strong>연결 테스트</strong>로 실제 응답 여부를 확인합니다.</li><li>지원 회사와 직무를 입력한 뒤 PDF 또는 텍스트 모드를 선택합니다.</li><li><strong>AI 분석 시작하기</strong>를 누르면 오른쪽에 리포트가 생성됩니다.</li><li>리포트를 기준으로 자소서와 포트폴리오 문장을 다시 다듬습니다.</li></ul></div></div>
+              <div class="note"><div class="guideblock"><h3>결과를 읽는 법</h3><ul class="list"><li><strong>직무 경험 요약</strong>은 지금 문서가 어떤 인재로 읽히는지 보여줍니다.</li><li><strong>STAR 구조화</strong>는 면접 답변으로 바로 전환 가능한 핵심 경험을 정리합니다.</li><li><strong>보완 포인트</strong>는 서류 통과를 위해 우선 보강할 빈칸을 알려줍니다.</li></ul></div></div>
+            </div>
+            <div class="col">
+              <div class="note"><div class="guideblock"><h3>입력 팁</h3><ul class="list"><li>프로젝트 목적, 팀 규모, 역할, 성과 수치가 들어가면 품질이 높아집니다.</li><li>메모 형태라도 괜찮지만 경험 사이 구분을 해두면 정확도가 좋아집니다.</li><li>PDF는 텍스트 선택이 되는 문서일수록 안정적으로 분석됩니다.</li></ul></div></div>
+              <div class="note"><div class="guideblock"><h3>이럴 때 특히 좋습니다</h3><ul class="list"><li>포트폴리오 설명이 직무 관점으로 읽히는지 점검하고 싶을 때</li><li>자소서 초안이 감정형 표현에 치우쳤는지 확인하고 싶을 때</li><li>면접 대비용으로 경험을 STAR 구조로 정리하고 싶을 때</li></ul></div></div>
+              <div class="note dark"><div class="guideblock"><h3>주의사항</h3><p>API Key는 브라우저에서 직접 Gemini API로 전송됩니다. GitHub Pages처럼 정적 배포에는 바로 쓸 수 있지만, 공개 서비스 운영에는 백엔드 프록시를 두는 편이 더 안전합니다.</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="loader" id="loader-view"><div class="spinner"></div><h2 id="loader-title">AI 분석 준비 중입니다</h2><p id="loader-text">입력한 자료를 읽고 직무 기준 리포트를 생성하고 있습니다.</p></div>
+        <div class="report" id="report-view"></div>
+      </div>
+    </section>
+  </main>
+  <div class="modal open" id="guide-modal" aria-hidden="false">
+    <div class="backdrop" data-close="guide"></div>
+    <div class="modal-panel">
+      <div class="modalhead"><div><p class="eyebrow">Welcome Guide</p><h2>처음 접근하셨다면 이 설명서를 먼저 보고 시작하세요.</h2><p style="margin-top:10px;color:var(--muted);line-height:1.7;">설정부터 자료 입력, 결과 해석까지 핵심 흐름만 먼저 익히면 바로 사용할 수 있습니다.</p></div><button class="iconbtn" data-close="guide" type="button">×</button></div>
+      <div class="modalbody"><div class="manualgrid"><div class="manualcard"><strong>빠른 시작 1</strong>상단 <strong>설정</strong> 버튼에서 Gemini API Key와 모델을 입력합니다.</div><div class="manualcard"><strong>빠른 시작 2</strong><strong>연결 테스트</strong>를 눌러 실제로 호출 가능한지 먼저 확인합니다.</div><div class="manualcard"><strong>빠른 시작 3</strong>지원 회사와 직무를 입력하고 PDF 또는 텍스트 모드를 선택합니다.</div><div class="manualcard"><strong>빠른 시작 4</strong><strong>AI 분석 시작하기</strong>를 누르면 오른쪽 패널에 결과가 생성됩니다.</div></div><div class="notice"><strong>이 버전은 단일 HTML 파일입니다.</strong> 정적 호스팅에 바로 올리기 쉽고, 로컬에서도 바로 열 수 있습니다. 다만 Gemini API Key는 브라우저에서 직접 사용됩니다.</div></div>
+      <div class="modalfoot"><button class="btn btn-primary" id="guide-cta" type="button">설정부터 하기</button><button class="btn btn-secondary" data-close="guide" type="button">설명서 닫기</button></div>
+    </div>
+  </div>
+  <div class="modal" id="settings-modal" aria-hidden="true">
+    <div class="backdrop" data-close="settings"></div>
+    <div class="modal-panel settings">
+      <div class="modalhead"><div><p class="eyebrow">Settings</p><h2>Gemini API 연동 설정</h2><p style="margin-top:10px;color:var(--muted);line-height:1.7;">브라우저에서 직접 Gemini API를 호출합니다. 개인 테스트와 GitHub Pages 공유용으로 빠르게 쓰기 좋은 구조입니다.</p></div><button class="iconbtn" data-close="settings" type="button">×</button></div>
+      <div class="modalbody">
+        <div class="field"><label for="api-key">Gemini API Key</label><input id="api-key" type="password" placeholder="AIza... 형태의 Gemini API Key"></div>
+        <div class="field"><label for="model">Gemini 모델</label><select id="model"><option value="gemini-2.5-flash" selected>gemini-2.5-flash</option><option value="gemini-2.5-pro">gemini-2.5-pro</option><option value="gemini-2.0-flash">gemini-2.0-flash</option></select></div>
+        <div class="notice"><strong>보안 안내</strong> API Key는 브라우저 세션에만 저장됩니다. 공개 서비스 운영에는 별도 백엔드 프록시를 권장합니다.</div>
+      </div>
+      <div class="modalfoot"><a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer" class="btn btn-ghost">API 키 발급</a><div class="inline"><button class="btn btn-secondary" id="test-api" type="button">연결 테스트</button><button class="btn btn-primary" id="save-settings" type="button">저장하고 닫기</button></div></div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    (function(){
+      const D_MODEL="gemini-2.5-flash",MAX_TEXT=25000,MAX_PAGES=8,TIMEOUT=45000,WORKER="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+      const KEY={api:"resumecoach.single.api",model:"resumecoach.single.model",company:"resumecoach.single.company",role:"resumecoach.single.role"};
+      const GUIDE={
+        "게임 기획":"핵심 루프, 시스템 구조, 유저 동선, 밸런스 검증, 명세 문서화를 중심으로 평가하세요.",
+        "시스템 기획":"규칙 설계, 예외 처리, 수치 설계, 기능 간 상호작용 정의를 중심으로 평가하세요.",
+        "레벨 기획":"레벨 흐름, 난이도 곡선, 반복 테스트와 개선 루프를 중심으로 평가하세요.",
+        "라이브 운영 기획":"이벤트 운영, 지표 해석, 일정 관리, 타 부서 협업을 중심으로 평가하세요.",
+        "UI/UX 기획":"화면 구조화, 정보 우선순위, 전달 명확성을 중심으로 평가하세요.",
+        "클라이언트 개발":"엔진 이해도, 최적화, 디버깅 집요함, 사용자 경험 연결성을 중심으로 평가하세요.",
+        "서버 개발":"데이터 구조, API 설계, 병목 처리, 안정성과 예외 대응을 중심으로 평가하세요.",
+        "툴 개발":"자동화, 내부 사용자 관점, 생산성 향상 기여를 중심으로 평가하세요.",
+        "사업 PM":"우선순위 판단, 일정 조율, 리스크 관리, 데이터 기반 의사결정을 중심으로 평가하세요.",
+        "개발 PM":"개발 일정 관리, 이슈 트래킹, 협업 리딩, 실행력을 중심으로 평가하세요.",
+        "QA":"재현 절차, 테스트 케이스 설계, 품질 기준과 커뮤니케이션을 중심으로 평가하세요."
+      };
+      const S={mode:"pdf",file:null,report:""};
+      const $=id=>document.getElementById(id);
+      const E={body:document.body,toast:$("toast"),statusDot:$("status-dot"),statusLabel:$("status-label"),company:$("company"),role:$("role"),modePdf:$("mode-pdf"),modeText:$("mode-text"),pdfPanel:$("panel-pdf"),textPanel:$("panel-text"),drop:$("dropzone"),pdfInput:$("pdf-input"),chip:$("filechip"),filename:$("filename"),clearPdf:$("clear-pdf"),text:$("text"),analyze:$("analyze"),guideView:$("guide-view"),loader:$("loader-view"),report:$("report-view"),loaderTitle:$("loader-title"),loaderText:$("loader-text"),guideModal:$("guide-modal"),settingsModal:$("settings-modal"),openGuide:$("open-guide"),heroGuide:$("hero-guide"),guideLarge:$("guide-large"),openSettings:$("open-settings"),heroSettings:$("hero-settings"),guideSettings:$("guide-settings"),guideCta:$("guide-cta"),apiKey:$("api-key"),model:$("model"),testApi:$("test-api"),saveSettings:$("save-settings")};
+      const esc=s=>String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+      const fmt=s=>esc(s||"").replace(/\n/g,"<br>");
+      const toast=msg=>{E.toast.textContent=msg;E.toast.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>E.toast.classList.remove("show"),2600)};
+      const syncBody=()=>E.body.classList.toggle("modal-open",E.guideModal.classList.contains("open")||E.settingsModal.classList.contains("open"));
+      const open=type=>{if(type==="guide"){E.settingsModal.classList.remove("open");E.settingsModal.setAttribute("aria-hidden","true");E.guideModal.classList.add("open");E.guideModal.setAttribute("aria-hidden","false")}else{E.guideModal.classList.remove("open");E.guideModal.setAttribute("aria-hidden","true");E.settingsModal.classList.add("open");E.settingsModal.setAttribute("aria-hidden","false");setTimeout(()=>E.apiKey.focus(),30)}syncBody()};
+      const close=type=>{(type==="guide"?E.guideModal:E.settingsModal).classList.remove("open");(type==="guide"?E.guideModal:E.settingsModal).setAttribute("aria-hidden","true");syncBody()};
+      const setMode=mode=>{S.mode=mode;const pdf=mode==="pdf";E.modePdf.classList.toggle("active",pdf);E.modeText.classList.toggle("active",!pdf);E.pdfPanel.classList.toggle("hidden",!pdf);E.textPanel.classList.toggle("hidden",pdf)};
+      const setView=view=>{E.guideView.style.display=view==="guide"?"flex":"none";E.loader.classList.toggle("show",view==="loader");E.report.classList.toggle("show",view==="report")};
+      const persist=()=>{sessionStorage.setItem(KEY.api,E.apiKey.value.trim());localStorage.setItem(KEY.model,E.model.value);localStorage.setItem(KEY.company,E.company.value.trim());localStorage.setItem(KEY.role,E.role.value)};
+      const restore=()=>{E.apiKey.value=sessionStorage.getItem(KEY.api)||"";E.model.value=localStorage.getItem(KEY.model)||D_MODEL;E.company.value=localStorage.getItem(KEY.company)||"";E.role.value=localStorage.getItem(KEY.role)||E.role.value};
+      const updateStatus=()=>{const has=!!E.apiKey.value.trim();if(has){E.statusDot.style.background="var(--ok)";E.statusDot.style.boxShadow="0 0 0 6px rgba(16,185,129,.18)";E.statusLabel.textContent=(E.model.value||D_MODEL)+" 준비됨"}else{E.statusDot.style.background="#94a3b8";E.statusDot.style.boxShadow="0 0 0 6px rgba(148,163,184,.18)";E.statusLabel.textContent="API 설정 필요"}};
+      const validate=()=>{const apiKey=E.apiKey.value.trim(),model=E.model.value||D_MODEL;if(!apiKey){open("settings");throw new Error("Gemini API Key를 먼저 입력해주세요.")}return{apiKey,model}};
+      const endpoint=(apiKey,model)=>"https://generativelanguage.googleapis.com/v1beta/models/"+encodeURIComponent(model)+":generateContent?key="+encodeURIComponent(apiKey);
+      const prompt=(company,role,text)=>["당신은 게임업계 자기소개서와 포트폴리오를 분석하는 HR 코치입니다.","입력 자료를 읽고 아래 JSON 형식만 출력하세요.","","{",'  "experience_summary":"3~4문장 요약",','  "star_experiences":[{"title":"","situation":"","task":"","action":"","result":""}],','  "critique":{"comment":"","missing_points":["","",""]}',"}","","규칙:","- JSON 외 다른 문장 금지","- 한국어로 작성","- star_experiences는 1개 이상, 최대 3개","- missing_points는 정확히 3개","","분석 기준:","- 지원 회사: "+company,"- 지원 직무: "+role,"- 직무 관점: "+(GUIDE[role]||"직무 적합도, 협업 능력, 문제 해결 흐름, 결과의 구체성을 중심으로 평가하세요."),"","입력 자료:",text].join("\n");
+      const reqBody=text=>({contents:[{role:"user",parts:[{text}]}],generationConfig:{temperature:.2,topP:.9,maxOutputTokens:4096}});
+      async function callGemini(apiKey,model,text){const c=new AbortController(),t=setTimeout(()=>c.abort(),TIMEOUT);try{const r=await fetch(endpoint(apiKey,model),{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(reqBody(text)),signal:c.signal});const d=await r.json().catch(()=>null);if(!r.ok)throw new Error(d&&d.error&&d.error.message||"Gemini API 호출에 실패했습니다.");return d}catch(e){if(e.name==="AbortError")throw new Error("응답 시간이 초과되었습니다. 잠시 후 다시 시도해주세요.");throw e}finally{clearTimeout(t)}}
+      const responseText=d=>{if(d&&d.promptFeedback&&d.promptFeedback.blockReason)throw new Error("요청이 차단되었습니다. 사유: "+d.promptFeedback.blockReason);const c=d&&d.candidates&&d.candidates[0],parts=c&&c.content&&c.content.parts||[],text=parts.map(p=>p.text||"").join("").trim();if(!text)throw new Error("Gemini 응답 본문이 비어 있습니다.");return text};
+      const parseJson=text=>{let s=String(text||"").trim().replace(/^```json\s*/i,"").replace(/^```\s*/i,"").replace(/\s*```$/i,"").trim();const m=s.match(/\{[\s\S]*\}/);if(!m)throw new Error("JSON 형식 결과를 찾지 못했습니다.");return JSON.parse(m[0])};
+      async function extractPdf(file){if(!window.pdfjsLib)throw new Error("PDF 분석 라이브러리를 불러오지 못했습니다.");window.pdfjsLib.GlobalWorkerOptions.workerSrc=WORKER;try{const ab=await file.arrayBuffer(),pdf=await window.pdfjsLib.getDocument({data:ab}).promise;let out="",max=Math.min(pdf.numPages,MAX_PAGES);for(let i=1;i<=max;i++){const page=await pdf.getPage(i),content=await page.getTextContent(),pageText=content.items.map(it=>it.str||"").join(" ").replace(/\s+/g," ").trim();out+="[페이지 "+i+"]\n"+pageText+"\n\n"}return out.trim()}catch(e){console.error(e);throw new Error("PDF 텍스트 추출에 실패했습니다. 텍스트 기반 PDF인지 확인해주세요.")}}
+      function render(result,company,role,fileName){const summary=result&&result.experience_summary||"경험 요약 결과를 생성하지 못했습니다.",stars=Array.isArray(result&&result.star_experiences)?result.star_experiences:[],comment=result&&result.critique&&result.critique.comment||"직무 기준 피드백을 충분히 생성하지 못했습니다.",missing=Array.isArray(result&&result.critique&&result.critique.missing_points)?result.critique.missing_points.slice(0,3):["프로젝트 목적과 역할이 더 구체적으로 필요합니다.","성과 수치나 결과 지표가 있으면 설득력이 높아집니다.","협업 방식과 문제 해결 흐름을 더 분명히 적어주세요."];const starHtml=stars.length?stars.map((it,i)=>'<div class="star"><h4>경험 '+(i+1)+'. '+esc(it.title||"제목 없음")+'</h4><div><strong>Situation</strong><p>'+fmt(it.situation||"")+'</p></div><div><strong>Task</strong><p>'+fmt(it.task||"")+'</p></div><div><strong>Action</strong><p>'+fmt(it.action||"")+'</p></div><div><strong>Result</strong><p>'+fmt(it.result||"")+'</p></div></div>').join(""):'<div class="star"><p>STAR로 구조화할 만큼 구체적인 경험이 아직 부족합니다. 프로젝트 목적, 역할, 행동, 결과를 더 명시해주세요.</p></div>';const missingHtml=missing.map(v=>"<li>"+fmt(v)+"</li>").join("");E.report.innerHTML='<section class="report-card"><div class="reporthead"><div><span class="badge">진단 완료</span><h2 class="reporttitle">직무 경험 종합 진단 리포트</h2><p>Target: '+esc(company)+' | <strong>'+esc(role)+'</strong></p></div><div class="reportside"><span class="source">'+esc(fileName)+'</span><button class="btn btn-secondary" id="copy-report" type="button">리포트 복사</button></div></div></section><section class="report-card highlight"><h3>AI가 이해한 직무 경험 요약</h3><p>'+fmt(summary)+'</p></section><section class="report-card"><h3>직무 기준 STAR 구조화</h3><div class="stars">'+starHtml+'</div></section><section class="report-card dark"><h3>코치 피드백</h3><p>'+fmt(comment)+'</p><div style="height:14px"></div><h3>반드시 보완할 3가지</h3><ul class="list">'+missingHtml+'</ul></section>';S.report=["직무 경험 종합 진단 리포트","Target: "+company+" | "+role,"","[직무 경험 요약]",summary,"","[코치 피드백]",comment,"","[반드시 보완할 3가지]",missing.map((v,i)=>(i+1)+". "+v).join("\n")].join("\n");const copy=$("copy-report");if(copy)copy.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(S.report);toast("리포트를 클립보드에 복사했습니다.")}catch(e){console.error(e);toast("리포트 복사에 실패했습니다.")}})}
+      async function testApi(){try{persist();const s=validate(),d=await callGemini(s.apiKey,s.model,'연결 테스트입니다. {"status":"ok"} JSON만 출력하세요.'),j=parseJson(responseText(d));if(j.status!=="ok")throw new Error("연결 테스트 응답 형식이 예상과 다릅니다.");updateStatus();toast("Gemini 연결 테스트에 성공했습니다.")}catch(e){console.error(e);toast(e.message||"연결 테스트에 실패했습니다.")}}
+      async function analyze(){try{persist();close("guide");close("settings");const s=validate(),company=E.company.value.trim()||"일반 게임사",role=E.role.value;let source="",fileName="직접 입력 텍스트";if(S.mode==="pdf"){if(!S.file)throw new Error("분석할 PDF 파일을 먼저 업로드해주세요.");setView("loader");E.loaderTitle.textContent="PDF 텍스트를 읽는 중입니다";E.loaderText.textContent="문서에서 텍스트를 추출하고 있습니다.";source=await extractPdf(S.file);fileName=S.file.name;if(!source||source.length<20)throw new Error("PDF에서 읽을 수 있는 텍스트가 너무 적습니다. 텍스트 기반 PDF인지 확인해주세요.")}else{source=E.text.value.trim();if(!source)throw new Error("분석할 텍스트를 입력해주세요.")}setView("loader");E.loaderTitle.textContent="AI가 직무 기준으로 분석 중입니다";E.loaderText.textContent=role+" 관점으로 경험을 읽고 리포트를 구성하고 있습니다.";E.analyze.disabled=true;const d=await callGemini(s.apiKey,s.model,prompt(company,role,source.slice(0,MAX_TEXT))),j=parseJson(responseText(d));render(j,company,role,fileName);setView("report")}catch(e){console.error(e);setView(E.report.innerHTML.trim()?"report":"guide");toast(e.message||"분석 중 오류가 발생했습니다.")}finally{E.analyze.disabled=false}}
+      function onFiles(list){const files=[...(list||[])];if(!files.length)return;const file=files[0],isPdf=file.type==="application/pdf"||file.name.toLowerCase().endsWith(".pdf");if(!isPdf){toast("PDF 파일만 업로드할 수 있습니다.");return}S.file=file;E.filename.textContent=file.name;E.chip.classList.add("show");toast("PDF가 업로드되었습니다.")}
+      function clearPdf(){S.file=null;E.pdfInput.value="";E.chip.classList.remove("show")}
+      function bind(){E.openGuide.addEventListener("click",()=>open("guide"));E.heroGuide.addEventListener("click",()=>open("guide"));E.guideLarge.addEventListener("click",()=>open("guide"));E.openSettings.addEventListener("click",()=>open("settings"));E.heroSettings.addEventListener("click",()=>open("settings"));E.guideSettings.addEventListener("click",()=>open("settings"));E.guideCta.addEventListener("click",()=>open("settings"));E.modePdf.addEventListener("click",()=>setMode("pdf"));E.modeText.addEventListener("click",()=>setMode("text"));E.drop.addEventListener("click",()=>E.pdfInput.click());E.pdfInput.addEventListener("change",e=>onFiles(e.target.files));E.clearPdf.addEventListener("click",clearPdf);E.analyze.addEventListener("click",analyze);E.testApi.addEventListener("click",testApi);E.saveSettings.addEventListener("click",()=>{persist();updateStatus();close("settings");toast("설정을 저장했습니다.")});["dragenter","dragover"].forEach(n=>E.drop.addEventListener(n,e=>{e.preventDefault();e.stopPropagation();E.drop.classList.add("drag")}));["dragleave","drop"].forEach(n=>E.drop.addEventListener(n,e=>{e.preventDefault();e.stopPropagation();E.drop.classList.remove("drag")}));E.drop.addEventListener("drop",e=>onFiles(e.dataTransfer.files));E.apiKey.addEventListener("input",()=>{sessionStorage.setItem(KEY.api,E.apiKey.value.trim());updateStatus()});E.model.addEventListener("change",()=>{localStorage.setItem(KEY.model,E.model.value);updateStatus()});E.company.addEventListener("input",()=>localStorage.setItem(KEY.company,E.company.value.trim()));E.role.addEventListener("change",()=>localStorage.setItem(KEY.role,E.role.value));document.addEventListener("click",e=>{const t=e.target.closest("[data-close]");if(t)close(t.getAttribute("data-close"))});document.addEventListener("keydown",e=>{if(e.key==="Escape"){close("guide");close("settings")}})}
+      function init(){restore();updateStatus();setMode("pdf");setView("guide");bind();syncBody()}
+      init();
+    }());
+  </script>
+</body>
+</html>
